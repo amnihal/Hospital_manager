@@ -1,0 +1,41 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+    <h1>Employee</h1>
+    <div class="container-fluid">
+        <center>
+            <h1>Department Heads</h1>
+            
+            <hr>
+            <table class="table table-bordered table-striped ">
+                <tr class="table-dark">
+                    <th>Profile</th>
+                    <th>Employ Name</th>
+                    <th>Emp no.</th>
+                    <th>Description</th>
+                    <th>Age</th>
+                    <th>Department</th>
+
+                    <th>Report to</th>
+    
+                    
+                </tr>
+                {% for i in empl %}
+                <tr class="table-light">
+                    <td><img src="/static/uploads/{{ i.image }}" height="50" width="50"></td>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.emp_no }}</td>
+                    <td>{{ i.description }}</td>
+                    <td>{{ i.age }}</td>
+                    <td>{{ i.department }}</td>
+
+                    <td>{{i.report_to}}</td>
+    
+                </tr>
+                {% endfor %}
+    
+            </table>
+        </center>
+    </div>
+
+{% endblock %}

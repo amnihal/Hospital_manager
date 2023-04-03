@@ -1,0 +1,21 @@
+{% extends 'temp/admin.html' %}
+{% load crispy_forms_tags %}
+{% block base %}
+
+<hr>
+<h1 class="text-center">Create Employ</h1>
+<p>POST not working</p>
+
+<hr>
+
+<div class="container w-50 text-center my-5 p-2 bg-secondary" style="border-radius: 10px;">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <input type="submit" class="btn btn-success mb-5">
+    </form>
+</div>
+
+
+{% endblock %}

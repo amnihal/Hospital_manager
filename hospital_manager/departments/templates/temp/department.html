@@ -1,0 +1,37 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+    
+
+
+    
+<div class="container-fluid">
+    <center>
+        <hr>
+		<h1>Departments</h1>
+		
+        <hr>
+		
+        <div class="row my-5">
+            {% for i in dept %}
+            <diw class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/uploads/{{ i.image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ i.dept_name }}</h5>
+                      <p class="card-text">{{ i.description }}</p>
+                      <h6>since {{ i.year }}</h6>
+                    </div>
+                  </div>
+            </diw>
+            {% endfor %}
+        </div>
+
+	</center>
+</div>
+
+
+
+    
+
+{% endblock %}
